@@ -1,8 +1,60 @@
 import React from 'react';
+import avatar from './components/assets/images/self-photo.png';
 
-function Header() {
+function TopNav({ page, pageContentHandler }) {
     const navPadding = { padding: '5px' };
 
+    const linkState = (pageName) => {
+        return page === pageName ? 'nav-link active' : 'nav-link'
+    };
+
+    return (
+        <nav className='top-nav' style={{
+            display: 'flex',
+            fontFamily: 'helvetica',
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            justifyContent: 'flex-end',
+        }}>
+            <ul className='tabs' style={navPadding}>
+                <li className='tab-items'>
+                    <a
+                        href="#about"
+                        onClick={() => pageContentHandler('About Me')}
+                        className={linkState('About Me')}
+                    >About me
+                    </a>
+                </li>
+                <li className='tab-items'>
+                    <a
+                        href="#portfolio"
+                        onClick={() => pageContentHandler('Portfolio')}
+                        className={linkState('Portfolio')}
+                    >Portfolio
+                    </a>
+                </li>
+                <li className='tab-items'>
+                    <a
+                        href="#contact"
+                        onClick={() => pageContentHandler('Contact')}
+                        className={linkState('Contact')}
+                    >Contact
+                    </a>
+                </li>
+                <li className='tab-items'>
+                    <a
+                        href="#resume"
+                        onClick={() => pageContentHandler('Resume')}
+                        className={linkState('Resume')}
+                    >Resume
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+function Header() {
     return (
         <section style={{
             display: 'flex',
@@ -12,28 +64,11 @@ function Header() {
             justifyContent: 'flex-start',
         }}>
             <header>
+                <img src={avatar} alt='Photo of Ash Reid' />
+
                 <h1>Ash Reid</h1>
             </header>
-            <nav style={{
-                display: 'flex',
-                fontFamily: 'helvetica',
-                flexDirection: 'row',
-                alignItems: 'flex-end',
-                justifyContent: 'flex-end',
-            }}>
-                <div style={navPadding}>
-                    <a href="#">About me</a>
-                </div>
-                <div style={navPadding}>
-                    <a href="#">Portfolio</a>
-                </div>
-                <div style={navPadding}>
-                    <a href="#">Contact</a>
-                </div>
-                <div style={navPadding}>
-                    <a href="#">Resume</a>
-                </div>
-            </nav>
+            <TopNav />
         </section>
     );
 };
@@ -59,4 +94,4 @@ function Footer() {
     );
 };
 
-export { Header, Footer };
+export { TopNav, Header, Footer };

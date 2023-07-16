@@ -1,0 +1,47 @@
+import React from 'react';
+import resumePDF from './assets/documents'
+
+export default function Resume() {
+    return (
+        <div>
+            <h2>Resume</h2>
+                
+            <div>
+                Download my 
+                <a href={resumePDF} download='resume-sample.pdf'>resume</a>
+            </div>
+
+            <h3>Summary</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
+                arcu a nibh fermentum, a rhoncus nisi lacinia. Phasellus euismod erat ut
+                est vehicula, ac gravida sem tincidunt. Sed tincidunt orci eget risus
+                faucibus commodo.
+            </p>
+
+            <h3>Education</h3>
+            <p>
+                <strong>Bachelor of Science Fiction</strong> - Computer Science Fiction
+                <br />
+                University of Lorem Ipsum
+                <br />
+                Graduation Year: 2022
+            </p>
+
+            <h3>Experience</h3>
+            <p>
+                <strong>Software Developer</strong>
+                <br />
+                ABC Company
+                <br />
+                2019 - Present
+                <br />
+                - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <br />
+                - Nunc fermentum felis vel lacinia fermentum.
+                <br />
+                - In hac habitasse platea dictumst. Ut semper eleifend nisi non mollis.
+            </p>
+        </div>
+    );
+}
