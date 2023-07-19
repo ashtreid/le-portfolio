@@ -1,29 +1,13 @@
 import './App.css';
-import { Header, Footer } from './components/Common';
-// import About from './components/About';
-// import Contact from './components/Contact';
-// import Portfolio from './components/Portfolio';
-// import Resume from './components/Resume';
-
-// function App() {
-//   return (
-//     <div className="portfolio">
-//       <Header />
-//       <About />
-//       <Contact /> 
-//       <Portfolio />
-//       <Resume />
-//       <Footer />
-//     </div>
-//   );
-// }
-
+// import { Header, Footer } from './components/Common';
+import PortfolioPages from './components/PageContent'
 
 function App() {
   return (
     <div className="portfolio">
-      <Header />
-      <Footer />
+      {/* <Header /> */}
+      <PortfolioPages />
+      {/* <Footer /> */}
     </div>
   );
 }

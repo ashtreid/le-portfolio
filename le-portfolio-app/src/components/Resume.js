@@ -1,5 +1,7 @@
 import React from 'react';
-import resumePDF from './assets/documents'
+import resumePDF from './assets/documents/resume-sample.pdf'
+
+
 
 export default function Resume() {
     return (
@@ -8,7 +10,7 @@ export default function Resume() {
                 
             <div>
                 Download my 
-                <a href={resumePDF} download='resume-sample.pdf'>resume</a>
+                <a href={resumePDF} target='_blank' rel='noopener noreferrer'>resume</a>
             </div>
 
             <h3>Summary</h3>

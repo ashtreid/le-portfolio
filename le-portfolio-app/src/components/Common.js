@@ -1,21 +1,24 @@
 import React from 'react';
-import avatar from './components/assets/images/self-photo.png';
+
+
+
+// style={{
+//     display: 'flex',
+//     fontFamily: 'helvetica',
+//     flexDirection: 'row',
+//     alignItems: 'flex-end',
+//     justifyContent: 'flex-end',
+// }}
 
 function TopNav({ page, pageContentHandler }) {
     const navPadding = { padding: '5px' };
 
     const linkState = (pageName) => {
-        return page === pageName ? 'nav-link active' : 'nav-link'
+          return page === pageName ? 'nav-link active' : 'nav-link'
     };
 
     return (
-        <nav className='top-nav' style={{
-            display: 'flex',
-            fontFamily: 'helvetica',
-            flexDirection: 'row',
-            alignItems: 'flex-end',
-            justifyContent: 'flex-end',
-        }}>
+        <nav className='top-nav' >
             <ul className='tabs' style={navPadding}>
                 <li className='tab-items'>
                     <a
@@ -56,19 +59,12 @@ function TopNav({ page, pageContentHandler }) {
 
 function Header() {
     return (
-        <section style={{
-            display: 'flex',
-            fontFamily: 'helvetica',
-            flexDirection: 'row',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start',
-        }}>
+        <section>
             <header>
-                <img src={avatar} alt='Photo of Ash Reid' />
+
 
                 <h1>Ash Reid</h1>
             </header>
-            <TopNav />
         </section>
     );
 };
@@ -85,10 +81,10 @@ function Footer() {
             justifyContent: 'flex-start',
         }}>
             <div style={footerPadding}>
-                <a href="#">GitHub</a>
+                <a href="https://github.com/ashtreid" target='_blank' rel='noopener noreferrer'>GitHub</a>
             </div>
             <div style={footerPadding}>
-                <a href="#">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/ash-t-reid/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>
             </div>
         </section>
     );

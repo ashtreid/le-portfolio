@@ -1,4 +1,6 @@
 import React from 'react';
+// import { useState } from 'react';
+
 
 export default function Contact() {
     const handleSubmit = (event) => {
@@ -34,7 +36,7 @@ export default function Contact() {
     );
 }
 
-//_________________EXAMPLE FOR ERROR STATE HANDLING_______// FROM: https://react.dev/learn/managing-state_______________
+//_________________EXAMPLE FOR ERROR STATE HANDLING_______// FROM: https://react.dev/learn/managing-state
 
 
 // import { useState } from 'react';
