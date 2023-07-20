@@ -1,8 +1,6 @@
 import React from 'react';
 import resumePDF from './assets/documents/resume-sample.pdf'
 
-
-
 export default function Resume() {
     return (
         <div>

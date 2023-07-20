@@ -1,4 +1,58 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+root {
+  display: flex;
+  line-height: 1.6;
+  word-spacing: 1.4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  margin: 0px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab-items {
+  display: flex;
+  padding: 5px;
+}
+
+h2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h3 {
+  padding-top: 20px;
+  padding-bottom: 10px; 
+}
+
+.self-image {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.footer-items {
+  display: flex;
+  padding-top: 50px;
+}
+
+.footer-links {
+  display: flex;
+  padding-right: 5px;
+}
+
+/* _________________________________________________________________________ */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +89,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

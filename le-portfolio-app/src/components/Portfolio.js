@@ -48,22 +48,13 @@ const galleryData = [
 ];
 
 export default function Portfolio() {
-    const portfolioStyle = {
-        display: 'flex',
-        fontFamily: 'helvetica',
-        // flexDirection: 'column',
-        // alignItems: 'flex-start',
-        // justifyContent: 'flex-end',
-    };
-
     return (
         <div className='portfolio-gallery'>
             <h2>Portfolio</h2>
-
             {galleryData.map((app, index) => (
-                <div className='gallery-item' key={index} style={portfolioStyle}>
+                <div className='gallery-item' key={index}>
                     <h3>{app.title}</h3>
-                    <div className='gallery-links' style={portfolioStyle}>
+                    <div className='gallery-links'>
                         <div style={{ padding: '5px' }}>
                             <a href={app.deployedLink} target='_blank' rel='noopener noreferrer'>
                                 Deployed app

@@ -9,11 +9,6 @@ function HomeAboutPage() {
   return <AboutMe />;
 }
 
-// function ErrorPage() {
-//   return <h1>Woops! Can't find that page.</h1>
-// };
-
-
 export default function PorfolioPages() {
   const [page, setPage] = useState('About');
 
@@ -31,19 +26,17 @@ export default function PorfolioPages() {
   const pageContentHandler = (page) => setPage(page);
 
   return (
-    <div >
-      <section style={{
-        display: 'flex',
-        fontFamily: 'helvetica',
-        // flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-      }}>
+    <div className="container">
+      <header className="header">
         <Header />
-        <TopNav page={page} pageContentHandler={pageContentHandler} />
-      </section>
-      <article> {showPageContent()}</article>
-      <Footer />
+        <nav className="navbar">
+          <TopNav page={page} pageContentHandler={pageContentHandler} />
+        </nav>
+      </header>
+      <main className="content">{showPageContent()}</main>
+      <footer className="foot">
+        <Footer />
+      </footer>
     </div>
   );
 }
