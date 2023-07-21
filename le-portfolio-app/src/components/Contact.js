@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <div className='contact'>
       <h2>Contact me</h2>
-      <form className='contact-form' onSubmit={handleSubmit}>
+      <form className='contact-form main-container' onSubmit={handleSubmit}>
         <label htmlFor='name'>Name:</label>
         <input
           type='text'

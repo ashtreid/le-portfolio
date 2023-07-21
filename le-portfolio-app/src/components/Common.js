@@ -13,7 +13,7 @@ function TopNav({ page, pageContentHandler }) {
                     onClick={() => pageContentHandler('About Me')}
                     className={linkState('About Me')}
                 >About me
-                </a>
+                </a> 
             </li>
             <li className='tab-items'>
                 <a
@@ -21,7 +21,7 @@ function TopNav({ page, pageContentHandler }) {
                     onClick={() => pageContentHandler('Portfolio')}
                     className={linkState('Portfolio')}
                 >Portfolio
-                </a>
+                </a> 
             </li>
             <li className='tab-items'>
                 <a

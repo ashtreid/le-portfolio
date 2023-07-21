@@ -1,3 +1,18 @@
+:root {
+  --melon: #e5a9a9;
+  --magenta: #963d5a;
+  --sage: #8fa998;
+  --cambridge-blue: #9cbfa7;
+  --gunmetal: #19323c;
+  --charcoal: #274e5e;
+
+  --misty-rose: #f3d6d6;
+  --puce: #d598ad;
+  --ash-gray: #c9d5cd;
+  --honeydew: #d0e0d5;
+  --carolina-blue: #70abc3;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,8 +27,10 @@ root {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
-  margin: 0px;
+  align-items: center;
+  padding: 30px;
+  margin-top: 20px;
+  border: 3px solid var(--sage);
 }
 
 .tabs {
@@ -36,20 +53,92 @@ h3 {
   padding-bottom: 10px; 
 }
 
-.self-image {
+.main-container {
   display: flex;
-  padding-bottom: 50px;
+  padding: 10px;
+  background-color: var(--honeydew);
+  margin-bottom: 30px;
+}
+
+.about-container {
+  display: flex;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.self-image {
+  float: left;
+  margin-right: 1em;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  
+  flex-wrap: wrap;
+  border: 3px solid var(--sage);
+  margin-bottom: 30px;
+  padding: 40px;
+}
+
+.gallery-headers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 30px;
+  background-color: var(--cambridge-blue);
+}
+.gallery-links {
+  display: flex;
+}
+
+.horiseon-image {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-images {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
 }
 
 .footer-items {
   display: flex;
-  padding-top: 50px;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--sage);
 }
 
-.footer-links {
+a:link {
   display: flex;
-  padding-right: 5px;
+  /* justify-content: center; */
+  /* padding-right: 20px;
+  padding-top: 10px; */
+  margin: 15px; 
+  font-size: 20px;
+  color: var(--gunmetal);
+  text-decoration: none;
 }
+
+a:visited {
+  color: var(--gunmetal);
+}
+
+a:hover {
+  color: var(--ash-gray);
+}
+
+/* .footer-links {
+  display: flex;
+  padding-right: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+} */
 
 /* _________________________________________________________________________ */
 /* .App {

@@ -52,22 +52,29 @@ export default function Portfolio() {
         <div className='portfolio-gallery'>
             <h2>Portfolio</h2>
             {galleryData.map((app, index) => (
-                <div className='gallery-item' key={index}>
-                    <h3>{app.title}</h3>
-                    <div className='gallery-links'>
-                        <div style={{ padding: '5px' }}>
-                            <a href={app.deployedLink} target='_blank' rel='noopener noreferrer'>
-                                Deployed app
-                            </a>
-                        </div>
-                        <div style={{ padding: '5px' }}>
-                            <a href={app.gitHubLink} target='_blank' rel='noopener noreferrer'>
-                                GitHub repo
-                            </a>
-                        </div>
+                <div className='gallery-item main-container' key={index}>
+                    <div className='gallery-headers'>
+                        <h3 className='gallery-titles'>{app.title}</h3>
+                        <div className='gallery-links'>
+                            <div style={{ padding: '5px' }}>
+                                <a href={app.deployedLink} target='_blank' rel='noopener noreferrer'>
+                                    Deployed app
+                                </a>
+                            </div>
+                           
+                            <div style={{ padding: '5px' }}>
+                                <a href={app.gitHubLink} target='_blank' rel='noopener noreferrer'>
+                                    GitHub repo
+                                </a>
+                            </div>
 
+                        </div>
                     </div>
-                    <img src={app.image} alt={app.title} />
+                    <img src={app.image}
+                        alt={app.title}
+                        className={index === 0 ? 'horiseon-image' : 'gallery-images'}
+                    // className='gallery-images' 
+                    />
                 </div>
             ))}
         </div>
