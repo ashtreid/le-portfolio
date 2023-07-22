@@ -36,7 +36,6 @@ export default function Contact() {
       return;
     }
 
-    // Check for a valid email address using a simple regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       setIsEmailInvalid(true);
@@ -44,7 +43,6 @@ export default function Contact() {
       return;
     }
 
-    // If all checks pass, handle the form submission and reset the form
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Message:', message);
@@ -56,30 +54,42 @@ export default function Contact() {
 
   return (
     <div className='contact'>
-      <h2>Contact me</h2>
       <form className='contact-form main-container' onSubmit={handleSubmit}>
-        <label htmlFor='name'>Name:</label>
-        <input
-          type='text'
-          id='name'
-          name='name'
-          onBlur={handleBlur} 
-        />
-        {isNameEmpty && <span className='error'>Name is required</span>}
+        <div className='contact-items name'>
+          <label htmlFor='name'>Name:</label>
+          <input
+            type='text'
+            id='name'
+            name='name'
+            onBlur={handleBlur}
+          />
+          <div className='form-errors'>
+            {isNameEmpty && <span className='error'>Name is required</span>}
+          </div>
+        </div>
 
-        <label htmlFor='email'>Email:</label>
-        <input
-          type='text'
-          id='email'
-          name='email'
-          onBlur={handleBlur}
-        />
-        {isEmailInvalid && <span className='error'>Invalid email address</span>}
+        <div className='contact-items email'>
+          <label htmlFor='email'>Email:</label>
+          <input
+            type='text'
+            id='email'
+            name='email'
+            onBlur={handleBlur}
+          />
+          <div className='form-errors'>
+            {isEmailInvalid && <span className='error'>Invalid email address</span>}
+          </div>
+        </div>
 
-        <label htmlFor='message'>Message:</label>
-        <textarea id='message' name='message' rows={5} />
+        <div className='contact-items message'>
+          <label htmlFor='message'>Message:</label>
+          <textarea id='message' name='message' rows={5} />
+        </div>
 
-        <button type='submit'>Submit</button>
+        <div className='contact-items submit'>
+          <button type='submit'>Submit</button>
+        </div>
+
       </form>
     </div>
   );

@@ -10,7 +10,7 @@ function HomeAboutPage() {
 }
 
 export default function PorfolioPages() {
-  const [page, setPage] = useState('About');
+  const [page, setPage] = useState('About Me');
 
   const componentPageMap = {
     'About Me': <AboutMe />,
@@ -33,6 +33,9 @@ export default function PorfolioPages() {
           <TopNav page={page} pageContentHandler={pageContentHandler} />
         </nav>
       </header>
+      <h2 className='main-page-header'>
+        {page}
+      </h2>
       <main className="content">{showPageContent()}</main>
       <footer className="foot">
         <Footer />

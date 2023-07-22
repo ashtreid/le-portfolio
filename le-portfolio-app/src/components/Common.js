@@ -1,19 +1,22 @@
 import React from 'react';
+import gitHubImg from './assets/images/socials/github-mark-white.png';
+import linkedInImg from './assets/images/socials/In-White-96.png';
 
 function TopNav({ page, pageContentHandler }) {
     const linkState = (pageName) => {
-        return page === pageName ? 'nav-link active' : 'nav-link'
+        return page === pageName ? 'tabs active' : 'tabs'
     };
 
     return (
-        <ul className='tabs'>
+
+        <ul className={'tabs'}>
             <li className='tab-items'>
                 <a
                     href="#about"
                     onClick={() => pageContentHandler('About Me')}
                     className={linkState('About Me')}
                 >About me
-                </a> 
+                </a>
             </li>
             <li className='tab-items'>
                 <a
@@ -21,7 +24,7 @@ function TopNav({ page, pageContentHandler }) {
                     onClick={() => pageContentHandler('Portfolio')}
                     className={linkState('Portfolio')}
                 >Portfolio
-                </a> 
+                </a>
             </li>
             <li className='tab-items'>
                 <a
@@ -40,21 +43,29 @@ function TopNav({ page, pageContentHandler }) {
                 </a>
             </li>
         </ul>
+
     );
 };
 
 function Header() {
-    return (<h1>Ash Reid</h1>);
+    return (
+        <h1>Ash Reid</h1>
+    );
 };
 
 function Footer() {
     return (
         <section className="footer-items">
             <div className='footer-links'>
-                <a href="https://github.com/ashtreid" target='_blank' rel='noopener noreferrer'>GitHub</a>
+                <a href="https://github.com/ashtreid" target='_blank' rel='noopener noreferrer'>
+                    <img src={gitHubImg} alt='GitHub link' width='50' height='50' />
+                </a>
             </div>
             <div className='footer-links'>
-                <a href="https://www.linkedin.com/in/ash-t-reid/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>
+                <a href="https://www.linkedin.com/in/ash-t-reid/" target='_blank' rel='noopener noreferrer'>
+                    <img src={linkedInImg} alt='LinkedIn link' width='50' height='50' />
+
+                </a>
             </div>
         </section>
     );

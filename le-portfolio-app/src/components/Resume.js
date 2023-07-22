@@ -4,13 +4,8 @@ import resumePDF from './assets/documents/resume-sample.pdf'
 export default function Resume() {
     return (
         <div>
-            <h2>Resume</h2>
 
-            <div>
-                Download my
-                <a href={resumePDF} target='_blank' rel='noopener noreferrer'>resume</a>
-            </div>
-            <section className='main-container'>
+            <section className='main-container resume-container'>
                 <h3>Summary</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
@@ -42,6 +37,11 @@ export default function Resume() {
                     <br />
                     - In hac habitasse platea dictumst. Ut semper eleifend nisi non mollis.
                 </p>
+                <div >
+                    <a href={resumePDF} target='_blank' rel='noopener noreferrer' className='download-link'>
+                        Download my resume
+                    </a>
+                </div>
             </section>
         </div>
     );
