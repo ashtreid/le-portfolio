@@ -1,45 +1,33 @@
 import React from 'react';
-import resumePDF from './assets/documents/resume-sample.pdf'
+import resumePDF from './assets/documents/ash-reid-resume.pdf'
 
 export default function Resume() {
     return (
         <div>
 
             <section className='main-container resume-container'>
-                <h3>Summary</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
-                    arcu a nibh fermentum, a rhoncus nisi lacinia. Phasellus euismod erat ut
-                    est vehicula, ac gravida sem tincidunt. Sed tincidunt orci eget risus
-                    faucibus commodo.
+                    <strong>Front-end Proficiencies</strong>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>HTML/ CSS</li>
+                        <li>jQuery</li>
+                        <li>Responsive design</li>
+                    </ul>
                 </p>
 
-                <h3>Education</h3>
                 <p>
-                    <strong>Bachelor of Science Fiction</strong> - Computer Science Fiction
-                    <br />
-                    University of Lorem Ipsum
-                    <br />
-                    Graduation Year: 2022
-                </p>
-
-                <h3>Experience</h3>
-                <p>
-                    <strong>Software Developer</strong>
-                    <br />
-                    ABC Company
-                    <br />
-                    2019 - Present
-                    <br />
-                    - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br />
-                    - Nunc fermentum felis vel lacinia fermentum.
-                    <br />
-                    - In hac habitasse platea dictumst. Ut semper eleifend nisi non mollis.
+                    <strong>Back-end Proficiencies</strong>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Express JS</li>
+                        <li>MongoDB</li>
+                    </ul>
                 </p>
                 <div >
                     <a href={resumePDF} target='_blank' rel='noopener noreferrer' className='download-link'>
-                        Download my resume
+                        Download my full resume
                     </a>
                 </div>
             </section>
