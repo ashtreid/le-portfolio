@@ -1,7 +1,7 @@
 import React from 'react';
 import selfImg from './assets/images/self-photo.png';
 
-// About Me page
+// Constructs the "About Me" page
 export default function AboutMe() {
     return (
         <div className='about-me'>

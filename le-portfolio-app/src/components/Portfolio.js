@@ -6,6 +6,7 @@ import img2 from './assets/images/placeholder-2.png';
 import img3 from './assets/images/placeholder-3.png';
 import img4 from './assets/images/placeholder-4.png';
 
+// Images, titles, and links for the portfolio page
 const galleryData = [
     {
         title: 'Horiseon SEO | HTML, CSS',
@@ -45,6 +46,7 @@ const galleryData = [
     }
 ];
 
+// Constructs the "Portfolio" page
 export default function Portfolio() {
     return (
         <div className='portfolio-gallery'>

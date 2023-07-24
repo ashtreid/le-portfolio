@@ -5,13 +5,14 @@ import Portfolio from './Portfolio';
 import Resume from './Resume';
 import { TopNav, Header, Footer } from './Common';
 
-function HomeAboutPage() {
-  return <AboutMe />;
-}
-
-export default function PorfolioPages() {
+// Combines all of the pages and sets logic for the nav bar and page content
+export default function PortfolioPages() {
   const [page, setPage] = useState('About Me');
 
+  // When the nav link is clicked, it will return the value of the link
+  const pageContentHandler = (page) => setPage(page);
+
+  // The nav link value is associated with the page contents in this map.
   const componentPageMap = {
     'About Me': <AboutMe />,
     'Portfolio': <Portfolio />,
@@ -19,11 +20,10 @@ export default function PorfolioPages() {
     'Resume': <Resume />,
   };
 
+  // Returns the page content based on the clicked nav link, otherwise it sets it to the "About Me" page.
   const showPageContent = () => {
-    return componentPageMap[page] || <HomeAboutPage />;
+    return componentPageMap[page] || <AboutMe />;
   };
-
-  const pageContentHandler = (page) => setPage(page);
 
   return (
     <div className="container">

@@ -1,6 +1,7 @@
 import React from 'react';
 import resumePDF from './assets/documents/ash-reid-resume.pdf'
 
+// Constructs the "Resume" page with a downloadable link
 export default function Resume() {
     return (
         <div>

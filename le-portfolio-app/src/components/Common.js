@@ -2,13 +2,15 @@ import React from 'react';
 import gitHubImg from './assets/images/socials/github-mark-white.png';
 import linkedInImg from './assets/images/socials/In-White-96.png';
 
+// Constructs the navigation portion on the top of each page
 function TopNav({ page, pageContentHandler }) {
+    
+    // Creates an extra className `active` to change color in App.css when link is clicked.
     const linkState = (pageName) => {
         return page === pageName ? 'tabs active' : 'tabs'
     };
 
     return (
-
         <ul className={'tabs'}>
             <li className='tab-items'>
                 <a
@@ -47,12 +49,15 @@ function TopNav({ page, pageContentHandler }) {
     );
 };
 
+// Constructs simple header portion at the top of each page 
 function Header() {
     return (
         <h1>Ash Reid</h1>
     );
 };
 
+// Constructs the footer portion at the bottom of each page.
+// Uses logo images as links
 function Footer() {
     return (
         <section className="footer-items">
