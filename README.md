@@ -25,3 +25,4 @@ With this revamped portfolio, I aim to provide visitors with a streamlined and e
 
 ![Sample of my portfolio](./src/components/assets/images/new-portfolio-sample.png)  
 
+[le-portfolio repository](https://github.com/ashtreid/le-portfolio) | [le-portfolio live](https://ashtreid.github.io/le-portfolio/)
