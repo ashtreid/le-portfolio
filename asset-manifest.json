@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/le-portfolio/static/css/main.c8dcabad.css",
+    "main.js": "/le-portfolio/static/js/main.d3634dc1.js",
+    "static/media/horiseon-sample.png": "/le-portfolio/static/media/horiseon-sample.91fc5947dd2183170fda.png",
+    "static/media/placeholder-2.png": "/le-portfolio/static/media/placeholder-2.8055fe11403b4e24e71b.png",
+    "static/media/placeholder-4.png": "/le-portfolio/static/media/placeholder-4.09aa956809bd883bb7df.png",
+    "static/media/ash-reid-resume.pdf": "/le-portfolio/static/media/ash-reid-resume.2d2175d3ce024867e2b6.pdf",
+    "static/media/flexcellentLogo.png": "/le-portfolio/static/media/flexcellentLogo.465f8f9a2d19640a1fe6.png",
+    "static/media/placeholder-3.png": "/le-portfolio/static/media/placeholder-3.f22166fd55ded564f7f3.png",
+    "static/media/self-photo.png": "/le-portfolio/static/media/self-photo.26aef9b51abc15ee8564.png",
+    "index.html": "/le-portfolio/index.html",
+    "main.c8dcabad.css.map": "/le-portfolio/static/css/main.c8dcabad.css.map",
+    "main.d3634dc1.js.map": "/le-portfolio/static/js/main.d3634dc1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8dcabad.css",
+    "static/js/main.d3634dc1.js"
+  ]
+}
