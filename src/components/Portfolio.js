@@ -2,6 +2,7 @@ import React from 'react';
 import horiseonImg from './assets/images/horiseon-sample.png';
 import flickImg from './assets/images/flick-logo.png';
 import flexImg from './assets/images/flexcellentLogo.png';
+import ghostBusters from './assets/images/ghostBusters.png';
 import img2 from './assets/images/placeholder-2.png';
 import img3 from './assets/images/placeholder-3.png';
 import img4 from './assets/images/placeholder-4.png';
@@ -27,10 +28,10 @@ const galleryData = [
         image: flexImg,
     },
     {
-        title: 'Coming soon!',
-        deployedLink: '',
-        gitHubLink: '',
-        image: img2,
+        title: 'Ghostbusters | React, React-Leaflet, GraphQL, MongoDB',
+        deployedLink: 'https://triskaidekaphobia-48aedc7fe5ca.herokuapp.com/',
+        gitHubLink: 'https://github.com/ashtreid/ghostbusters',
+        image: ghostBusters,
     },
     {
         title: 'Coming soon!',
