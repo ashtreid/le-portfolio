@@ -1,28 +1,58 @@
-import React, { useState } from 'react';
-import AboutMe from './About';
-import Contact from './Contact';
-import Portfolio from './Portfolio';
-import Resume from './Resume';
-import { TopNav, Header, Footer } from './Common';
+import React, { useEffect, useState } from "react";
+import AboutMe from "./About";
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
+import Resume from "./Resume";
+import { TopNav, Header, Footer } from "./Common";
 
-// Combines all of the pages and sets logic for the nav bar and page content
 export default function PortfolioPages() {
-  const [page, setPage] = useState('About Me');
+  const getPageFromHash = () => {
+    const hash = window.location.hash.toLowerCase();
 
-  // When the nav link is clicked, it will return the value of the link
-  const pageContentHandler = (page) => setPage(page);
-
-  // The nav link value is associated with the page contents in this map.
-  const componentPageMap = {
-    'About Me': <AboutMe />,
-    'Portfolio': <Portfolio />,
-    'Contact': <Contact />,
-    'Resume': <Resume />,
+    switch (hash) {
+      case "#portfolio":
+        return "Portfolio";
+      case "#contact":
+        return "Contact";
+      case "#resume":
+        return "Resume";
+      case "#about":
+      default:
+        return "About Me";
+    }
   };
 
-  // Returns the page content based on the clicked nav link, otherwise it sets it to the "About Me" page.
+  const [page, setPage] = useState(getPageFromHash());
+
+  const pageContentHandler = (newPage) => {
+    setPage(newPage);
+  };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setPage(getPageFromHash());
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const componentPageMap = {
+    "About Me": <AboutMe page={page} pageContentHandler={pageContentHandler} />,
+    Portfolio: <Portfolio />,
+    Contact: <Contact />,
+    Resume: <Resume />,
+  };
+
   const showPageContent = () => {
-    return componentPageMap[page] || <AboutMe />;
+    return (
+      componentPageMap[page] || (
+        <AboutMe page={page} pageContentHandler={pageContentHandler} />
+      )
+    );
   };
 
   return (
@@ -33,16 +63,14 @@ export default function PortfolioPages() {
           <TopNav page={page} pageContentHandler={pageContentHandler} />
         </nav>
       </header>
-      <h2 className='main-page-header'>
-        {page}
-      </h2>
+
+      <h2 className="main-page-header">{page}</h2>
+
       <main className="content">{showPageContent()}</main>
+
       <footer className="foot">
         <Footer />
       </footer>
     </div>
   );
 }
-
-
-
