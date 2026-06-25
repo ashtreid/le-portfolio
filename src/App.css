@@ -73,6 +73,7 @@ h3 {
   padding: 10px;
   background-color: var(--honeydew);
   margin-bottom: 30px;
+
 }
 
 .about-container {
@@ -148,6 +149,11 @@ button:hover {
 
 .gallery-links {
   display: flex;
+  font-size: 20px;
+}
+
+.gallery-titles {
+  font-size: 40px;
 }
 
 .horiseon-image {
@@ -185,10 +191,20 @@ button:hover {
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-right: 30px;
   background-color: var(--sage);
 }
 
 .tabs a:link {
+  display: flex;
+  margin: 15px;
+  font-size: var(--font-size);
+  color: var(--gunmetal);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-links a:link {
   display: flex;
   margin: 15px;
   font-size: var(--font-size);
