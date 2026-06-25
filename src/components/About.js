@@ -1,5 +1,6 @@
 import React from "react";
-import selfImg from "./assets/images/self-photo.png";
+// import selfImg from "./assets/images/self-photo.png";
+import selfImg from "./assets/images/186crop.png";
 
 // Constructs the "About Me" page
 export default function AboutMe({ page, pageContentHandler }) {

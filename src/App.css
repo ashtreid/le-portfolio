@@ -82,9 +82,15 @@ h3 {
 }
 
 .self-image {
-  float: left;
   margin-right: 1em;
   margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.self-image img {
+  width: 150px;
+  height: auto;
+  display: block;
 }
 
 .contact-items {
