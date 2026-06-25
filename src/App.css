@@ -182,7 +182,7 @@ button:hover {
   background-color: var(--sage);
 }
 
-a:link {
+.tabs a:link {
   display: flex;
   margin: 15px;
   font-size: var(--font-size);
@@ -201,4 +201,9 @@ a:hover {
 
 p {
   color: var(--gunmetal)
+}
+
+.inline-contact-link:hover {
+  color: var(--sage);
+  display: inline;
 }
